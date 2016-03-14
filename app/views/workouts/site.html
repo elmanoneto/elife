@@ -1,0 +1,48 @@
+<div ng-controller="WorkoutController">
+
+  <header>
+    <div class="header">
+      <h1>Workout Log</h1>
+      <h2>Registre suas atividades físicas.</h2>
+      <hr>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <form class="pure-form" data-ng-submit="add(time, date, type)">
+        <input type="time" placeholder="Tempo" ng-model="time" required>
+        <input type="date" ng-model="date" required>
+        <select id="" ng-model="type" required>
+          <option>Corrida</option>
+          <option>Natação</option>
+          <option>Bicicleta</option>
+        </select>
+        <button type="submit" class="pure-button pure-button-primary">Cadastrar</button>
+      </form>
+
+      <table class="pure-table" ng-if="workouts.length > 0">
+        <thead>
+            <tr>
+                <th>Tempo</th>
+                <th>Tipo</th>
+                <th>Data</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="workout in workouts">
+                <td>{{workout.time}}</td>
+                <td>{{workout.type}}</td>
+                <td>{{workout.date | date: 'dd/MM/yyyy'}}</td>
+                <td><img src="images/close_red.png" ng-click="remove(workout.id, $index)" title="Remover"/></td>
+            </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3 ng-if="workouts.length > 0">{{total}}</h3>
+      <h3 ng-if="workouts.length < 1">Nenhum registro de atividade.</h3>
+    </div>
+  </section>
+</div>

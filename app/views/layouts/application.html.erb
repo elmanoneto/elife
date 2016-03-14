@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="elife">
+<head>
+  <title>E.life</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,300,200' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+  <%= yield %>
+</div>
+</body>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</html>

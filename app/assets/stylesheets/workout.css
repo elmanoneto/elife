@@ -1,0 +1,42 @@
+body {
+  background-color: white !important;
+  font-family: 'Raleway', sans-serif;
+  line-height: 0.6;
+}
+
+header div.header {
+  text-align: center;
+}
+
+header div.header h1{
+  font-weight: 300;
+  font-size: 28pt;
+}
+
+header div.header h2{
+  font-weight: 100;
+  font-size: 128%;
+}
+
+header div.header hr{
+  width: 80%;
+}
+
+section div.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+}
+
+section div.container .pure-table {
+  margin: 0 auto !important;
+  width: 50% !important;
+  position: relative;
+  top: 15px;
+}
+
+section div.container img{
+  width: 20px;
+  cursor: pointer;
+}
