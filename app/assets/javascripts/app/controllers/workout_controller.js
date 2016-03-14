@@ -1,4 +1,4 @@
-angular.module('workout.controller', [])
+angular.module('workout.controllers', [])
   .controller('WorkoutController', function ($scope, WorkoutService) {
 
     WorkoutService.query(function (data) {
