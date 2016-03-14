@@ -1,6 +1,8 @@
 angular.module('workout.controllers', [])
   .controller('WorkoutController', function ($scope, WorkoutService) {
 
+    $scope.type = 'selecione';
+
     WorkoutService.query(function (data) {
       $scope.workouts = data;
     });
